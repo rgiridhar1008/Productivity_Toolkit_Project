@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Toolkit</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container animate__animated animate__fadeIn">
+        <header class="app-header">
+            <div class="header-icons">
+                <i id="theme-switcher" class="fas fa-moon"></i>
+                <i id="settings-icon" class="fas fa-cog"></i>
+            </div>
+            <h1>Productivity Toolkit</h1>
+            <nav class="app-nav">
+                <button class="nav-tab active" data-tab="todo"><i class="fas fa-list-check"></i> To-Do</button>
+                <button class="nav-tab" data-tab="stopwatch"><i class="fas fa-stopwatch"></i> Timer</button>
+                <button class="nav-tab" data-tab="bmi"><i class="fas fa-calculator"></i> BMI Calc</button>
+                <button class="nav-tab" data-tab="notes"><i class="fas fa-sticky-note"></i> Notes</button>
+                <button class="nav-tab" data-tab="analytics"><i class="fas fa-chart-line"></i> Analytics</button>
+            </nav>
+        </header>
+
+        <main class="app-main">
+            <!-- To-Do List Section -->
+            <section id="todo" class="tool-content active">
+                <h2>To-Do Task Manager</h2>
+                <form id="task-form">
+                    <input type="text" id="task-input" placeholder="Add a new task..." required>
+                    <div class="form-row">
+                        <select id="task-priority">
+                            <option value="low">Low Priority</option>
+                            <option value="medium" selected>Medium Priority</option>
+                            <option value="high">High Priority</option>
+                        </select>
+                        <button type="submit">Add Task</button>
+                    </div>
+                </form>
+                <ul id="task-list"></ul>
+            </section>
+
+            <!-- Timer Section -->
+            <section id="stopwatch" class="tool-content">
+                <div class="timer-container">
+                    <div class="timer-toggle">
+                        <button id="show-stopwatch" class="secondary">Stopwatch</button>
+                        <button id="show-pomodoro">Pomodoro</button>
+                    </div>
+                    <div id="stopwatch-view">
+                        <h2>Stopwatch</h2>
+                        <div class="timer-display" id="stopwatch-display">00:00:00.000</div>
+                        <div class="timer-controls">
+                            <button id="start-stop-btn">Start</button>
+                            <button id="reset-btn">Reset</button>
+                        </div>
+                    </div>
+                    <div id="pomodoro-view" style="display: none;">
+                        <h2>Pomodoro Timer</h2>
+                        <div class="timer-display" id="pomodoro-display">25:00</div>
+                        <div class="timer-controls">
+                            <button id="start-pomodoro-btn">Start</button>
+                            <button id="reset-pomodoro-btn">Reset</button>
+                        </div>
+                        <p id="pomodoro-status">Time to focus!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BMI Calculator Section -->
+            <section id="bmi" class="tool-content">
+                <h2>BMI Calculator</h2>
+                <form id="bmi-form">
+                    <input type="number" id="weight" placeholder="Weight (kg)" required>
+                    <input type="number" id="height" placeholder="Height (cm)" required>
+                    <button type="submit">Calculate & Save</button>
+                </form>
+                <div id="bmi-result"></div>
+            </section>
+
+            <!-- Notes Section -->
+            <section id="notes" class="tool-content">
+                <h2>Markdown Notes</h2>
+                <div id="notes-editor">
+                    <textarea id="notes-input" placeholder="Type your markdown notes here..."></textarea>
+                    <h3>Live Preview</h3>
+                    <div id="notes-output"></div>
+                </div>
+            </section>
+
+            <!-- Analytics Section -->
+            <section id="analytics" class="tool-content">
+                <h2>Your Progress</h2>
+                <div class="charts-grid">
+                    <div class="chart-container animate__animated"><h3>Task Completion</h3><canvas id="task-chart"></canvas></div>
+                    <div class="chart-container animate__animated"><h3>Pending by Priority</h3><canvas id="priority-chart"></canvas></div>
+                    <div class="chart-container animate__animated"><h3>BMI History</h3><canvas id="bmi-chart"></canvas></div>
+                </div>
+            </section>
+            
+            <!-- Settings Section -->
+            <section id="settings" class="tool-content">
+                <h2>Settings</h2>
+                <div class="settings-container">
+                    <button id="notification-btn">Enable Notifications</button>
+                    <button id="export-data-btn" class="secondary">Export My Data</button>
+                    <button id="import-data-btn" class="secondary">Import My Data</button>
+                    <input type="file" id="import-file-input" style="display: none;" accept=".json">
+                    <button id="clear-all-data-btn" class="danger">Clear All App Data</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <div id="music-player">
+                <audio id="focus-audio" loop></audio>
+                <button id="play-pause-music"><i class="fas fa-play"></i></button>
+                <div id="custom-music-select">
+                    <button id="current-track-btn">
+                        <span id="current-track-name"></span>
+                        <i class="fas fa-chevron-up"></i>
+                    </button>
+                    <ul id="track-list-options" class="hidden">
+                        <!-- Music tracks will be populated by JS -->
+                    </ul>
+                </div>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+            </div>
+            <div id="quote-of-the-day">Loading quote...</div>
+        </footer>
+    </div>
+
+    <!-- CDN for Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
