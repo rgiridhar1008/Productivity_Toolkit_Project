@@ -109,7 +109,7 @@ Bar Chart: Remaining tasks by priority
 
 Line Chart: Historical BMI data
 
-⚙ **3. Global Features**
+⚙  **3. Global Features**
 Dark/Light Mode
 Toggle via button in header (sun/moon icon).
 
@@ -142,14 +142,14 @@ Import Data: Parses a user-uploaded JSON and restores saved tasks, notes, BMI, e
 
 Clear Data: Deletes everything from localStorage after confirmation.
 
-🔒** 4. Privacy & Data Handling**
+🔒 **4. Privacy & Data Handling**
 Storage: 100% local – all data is stored securely in the browser using localStorage.
 
 No Backend/API: Fully offline. No user data is transmitted externally.
 
 Export/Import: Users can back up and restore data manually.
 
-📱** 5. Responsiveness & Accessibility**
+📱 **5. Responsiveness & Accessibility**
 ✅ Responsive Layout
 Uses CSS media queries for:
 
