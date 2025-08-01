@@ -1,6 +1,7 @@
 # Productivity Toolkit – Project Overview
 
 **1. Technical Architecture**
+
 Front-End Stack
 HTML5: Defines the structural skeleton of the application and component hierarchy.
 
