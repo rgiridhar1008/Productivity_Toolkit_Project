@@ -277,4 +277,3 @@ Load a previously saved backup file.
 
 Clear All App Data:
 Use this option with caution—it permanently deletes all your app data and resets your experience.
-
