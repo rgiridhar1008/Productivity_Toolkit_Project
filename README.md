@@ -1,4 +1,4 @@
-Productivity Toolkit – Project Overview
+# Productivity Toolkit – Project Overview
 
 **1. Technical Architecture**
 Front-End Stack
@@ -83,7 +83,7 @@ Live Preview: Input + output panels update in real time.
 
 Formatting support:
 
-# Headings
+Headings
 
 **bold**, *italic*
 
@@ -100,7 +100,7 @@ Bar Chart: Remaining tasks by priority
 
 Line Chart: Historical BMI data
 
-⚙** 3. Global Features**
+⚙ **3. Global Features**
 Dark/Light Mode
 Toggle via button in header (sun/moon icon).
 
@@ -156,7 +156,7 @@ ARIA labels for buttons and icons (e.g., trash, theme toggle).
 High contrast theme options.
 
 
-**Welcome to Your Productivity Toolkit: A Complete User Guide**
+# **Welcome to Your Productivity Toolkit: A Complete User Guide**
 
 1. The Main Interface
 When you first open the website, you'll land on the main dashboard. Key features include:
