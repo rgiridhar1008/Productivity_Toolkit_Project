@@ -40,9 +40,12 @@ productivity-toolkit/
 ├── assets/
 │   ├── music/             
 │   └── icons/             
-├── libs/                  
+├── libs/   
+
 │   ├── chart.min.js
+
 │   ├── marked.min.js
+
 │   └── canvas-confetti.min.js
 
 **2. Core Features & Functional Logic**
