@@ -3,7 +3,9 @@
 **1. Technical Architecture**
 
 Front-End Stack
-HTML5: Defines the structural skeleton of the application and component hierarchy.
+
+HTML5: 
+Defines the structural skeleton of the application and component hierarchy.
 
 CSS3:
 
@@ -27,16 +29,16 @@ Marked.js: Parses Markdown input into real-time rendered HTML.
 Canvas-Confetti.js: Adds celebratory animation when tasks are completed.
 
 📁 Suggested File Structure
-bash
-Copy code
+
+
 productivity-toolkit/
-├── index.html             # Main UI layout
-├── style.css              # Theming, layout, animations
-├── script.js              # Application logic and event handling
+├── index.html             
+├── style.css              
+├── script.js              
 ├── assets/
-│   ├── music/             # Lo-Fi, Ambient, Classical, etc.
-│   └── icons/             # App icons (sun, moon, trash, etc.)
-├── libs/                  # External libraries
+│   ├── music/             
+│   └── icons/             
+├── libs/                  
 │   ├── chart.min.js
 │   ├── marked.min.js
 │   └── canvas-confetti.min.js
