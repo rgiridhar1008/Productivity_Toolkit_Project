@@ -5,6 +5,7 @@
 Front-End Stack
 
 HTML5: 
+
 Defines the structural skeleton of the application and component hierarchy.
 
 CSS3:
@@ -32,6 +33,7 @@ Canvas-Confetti.js: Adds celebratory animation when tasks are completed.
 
 
 productivity-toolkit/
+
 ├── index.html             
 ├── style.css              
 ├── script.js              
