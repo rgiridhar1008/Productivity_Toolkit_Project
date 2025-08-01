@@ -238,11 +238,11 @@ Type your notes into the top text box.
 
 Format using Markdown symbols:
 
-# for big headings.
+#-for big headings.
 
-**bold** for bold text.
+** bold ** for bold text.
 
-*italic* for italic text.
+* italic * for italic text.
 
 - for list items.
 
