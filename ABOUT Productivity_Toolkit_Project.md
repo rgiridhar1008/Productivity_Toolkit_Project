@@ -14,8 +14,7 @@ Marked.js – Converts Markdown syntax into live HTML preview.
 Canvas-Confetti.js – Adds animated confetti celebration on task completion.
 
 File Structure (Suggested):
-arduino
-Copy code
+
 productivity-toolkit/
 ├── index.html
 ├── style.css
@@ -27,6 +26,9 @@ productivity-toolkit/
 │   ├── chart.min.js
 │   ├── marked.min.js
 │   └── canvas-confetti.min.js
+
+
+
 2. Core Functional Logic
 a) To-Do Task Manager:
 Priority Mapping: Priority values (High, Medium, Low) mapped to color codes.
@@ -67,6 +69,7 @@ Bar: Pending tasks by priority.
 
 Line: BMI changes over time.
 
+
 3. Global Features
 Dark/Light Mode:
 
@@ -94,12 +97,16 @@ Import: JSON file is parsed and injected into local storage.
 
 Clear Data: Full app reset with localStorage.clear().
 
+
+
 4. Data Handling & Privacy
 All data is stored locally in the browser using localStorage.
 
 No external server/API calls – making it lightweight and privacy-friendly.
 
 Users have full control to export, import, and delete their data.
+
+
 
 5. Responsiveness & Accessibility
 Media Queries: Adapt layout for mobile, tablet, and desktop views.
