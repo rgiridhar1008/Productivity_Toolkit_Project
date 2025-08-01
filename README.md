@@ -38,7 +38,8 @@ productivity-toolkit/
 ├── style.css              
 ├── script.js              
 ├── assets/
-│   ├── music/             
+│  
+ ├── music/             
 │   └── icons/             
 ├── libs/   
 
